@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sfidencio/mvp-ecommerce-java
+          search-paths: profiles
+        bootstrap: true
+server:
+  port: 8081
+
+logging:
+  level:
+    root: info
