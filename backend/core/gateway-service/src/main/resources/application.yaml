@@ -18,10 +18,8 @@ management:
       exposure:
         include: "*"
 
-
 server:
   port: 8080
-
 
 eureka:
   client:
