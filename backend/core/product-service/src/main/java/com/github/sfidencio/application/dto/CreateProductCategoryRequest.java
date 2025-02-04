@@ -1,4 +1,7 @@
 package com.github.sfidencio.application.dto;
 
-public class CreateProductCategoryRequest {
+import java.util.UUID;
+
+public record CreateProductCategoryRequest(UUID id,
+                                           String name) {
 }

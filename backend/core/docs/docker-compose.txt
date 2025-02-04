@@ -1,28 +1,34 @@
 services:
-  discovery-service:
+  core:
     build:
       context: .
-      dockerfile: Dockerfile-discovery-service
+      dockerfile: discovery-service/Dockerfile-service-discovery
       platforms:
         - linux/amd64
-    image: discovery-service:latest
-    # Substitua pelo nome/imagem do serviço de descoberta
+    image: core:latest
+
+  discovery-service:
+    build:
+      context: discovery-service/docker
+      dockerfile: discovery-service/Dockerfile-service-discovery
+      platforms:
+        - linux/amd64
+    image: discovery-service:latest # Substitua pelo nome/imagem do serviço de descoberta
     container_name: discovery-service
-    working_dir: /app
     ports:
       - "8761:8761" # Porta típica do Eureka ou outro servidor de descoberta
     environment:
       - EUREKA_SERVER_HOST=discovery-service
       - EUREKA_SERVER_PORT=8761
       - EUREKA_SERVER_LOG_LEVEL=info
-      - EUREKA_TYPE_PROTOCOL=http
+      - EUREKA_TYPE_PROTOCOL=https
     networks:
       - app-network
   
   config-service:
     build:
-      context: .
-      dockerfile: Dockerfile-config-service
+      context: config-service/docker
+      dockerfile: discovery-service/Dockerfile-service-discovery
       platforms:
         - linux/amd64
     image: config-service:latest # Substitua pelo nome/imagem do config-service
@@ -36,17 +42,17 @@ services:
       - EUREKA_SERVER_PORT=8761 # Define porta do servidor de descoberta
       - CONFIG_SERVER_HOST_GITHUB=https://github.com/sfidencio/mvp-ecommerce-java
       - CONFIG_SERVER_LOG_LEVEL=info
-      - CONFIG_TYPE_PROTOCOL=http
+      - CONFIG_TYPE_PROTOCOL=https
     depends_on:
       - discovery-service
     networks:
       - app-network
-
-
+        
+  
   gateway-service:
     build:
-      context: .
-      dockerfile: Dockerfile-gateway-service
+      context: gateway-service/docker
+      dockerfile: discovery-service/Dockerfile-service-discovery
       platforms:
         - linux/amd64
     image: gateway-service:latest # Substitua pelo nome/imagem do gateway-service
@@ -57,22 +63,18 @@ services:
       - GATEWAY_SERVICE_HOST=gateway-service
       - GATEWAY_SERVICE_PORT=8081
       - GATEWAY_SERVER_LOG_LEVEL=info
-      - GATEWAY_TYPE_PROTOCOL=http
-      - EUREKA_SERVER_HOST=discovery-service
-      - EUREKA_SERVER_PORT=8761
-      - EUREKA_SERVER_LOG_LEVEL=info
-      - EUREKA_TYPE_PROTOCOL=http
+      - GATEWAY_TYPE_PROTOCOL=https
     depends_on:
-      - config-service
       - discovery-service
+      - config-service
     networks:
       - app-network
 
 
   product-service:
     build:
-      context: .
-      dockerfile: Dockerfile-product-service
+      context: gateway-service/docker
+      dockerfile: discovery-service/Dockerfile-service-discovery
       platforms:
         - linux/amd64
     image: product-service:latest # Substitua pelo nome/imagem do product-service
@@ -87,65 +89,28 @@ services:
       - CONFIG_SERVER_HOST=config-service # Define host do servidor de configuração
       - CONFIG_SERVER_PORT=8080 # Define porta do servidor de configuração
       - PRODUCT_SERVER_LOG_LEVEL=info
-      - EUREKA_TYPE_PROTOCOL=http
-      - MONGO_SERVICE_HOST=mongodb
-      - MONGO_SERVICE_PORT=27017
-      - MONGO_SERVICE_DATABASE=productdb
-      - MONGO_USER=admin
-      - MONGO_PASSWORD=admin
     depends_on:
-      - mongodb
-      - config-service
       - discovery-service
-      - gateway-service
+      - config-service
+      - mongodb
     networks:
       - app-network
-
+  
   mongodb:
     image: mongo:6.0 # Você pode ajustar a versão se necessário
     container_name: mongodb
     ports:
       - "27017:27017"
+    environment:
+      - MONGO_SERVICE_HOST=mongodb
+      - MONGO_SERVICE_PORT=27017
+      - MONGO_SERVICE_DATABASE=productdb
+      - MONGO_USER=admin
+      - MONGO_PASSWORD=admin
     networks:
       - app-network
     volumes:
-      - mongo-data:/data/db # Dados serão persistidos localmente
-
-
-#  postgres:
-#    image: postgres:13
-#    container_name: postgres
-#    environment:
-#      POSTGRES_DB: keycloak
-#      POSTGRES_USER: keycloak
-#      POSTGRES_PASSWORD: keycloak
-#    volumes:
-#      - postgres-data:/var/lib/postgresql/data
-#    networks:
-#      - app-network
-
-  keycloak:
-    image: quay.io/keycloak/keycloak:24.0
-    environment:
-      KC_HOSTNAME: localhost
-      KC_HOSTNAME_PORT: 7080
-      KC_HOSTNAME_STRICT_BACKCHANNEL: "true"
-      KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: admin
-      KC_HEALTH_ENABLED: "true"
-      KC_LOG_LEVEL: info
-    healthcheck:
-      test: [ "CMD", "curl", "-f", "http://localhost:7080/health/ready" ]
-      interval: 15s
-      timeout: 2s
-      retries: 15
-    command: [ "start-dev", "--http-port", "7080", "--https-port", "7443" ]
-    ports:
-      - "7080:7080"
-      - "7443:7443"
-    networks:
-      - app-network
-
+      - mongo-data:/data/db # Dados serão persistidos localmente 
 
 networks:
   app-network:
@@ -153,4 +118,3 @@ networks:
 
 volumes:
   mongo-data:
-  postgres-data:

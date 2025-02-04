@@ -15,6 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-cloud.version>2024.0.0</spring-cloud.version>
         <spring-boot.version>3.4.1</spring-boot.version>
+        <lombok.version>1.18.36</lombok.version>
     </properties>
 
     <modules>
@@ -47,6 +48,16 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>org.modelmapper</groupId>
+                <artifactId>modelmapper</artifactId>
+                <version>3.1.1</version> <!-- Replace with the desired version -->
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>2.2.0</version> <!-- Replace with the latest version if needed -->
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
@@ -55,42 +66,12 @@
                 <!-- Plugin do Spring Boot -->
                 <plugin>
                     <configuration>
-                        <skip>true</skip> <!-- Evita configuração duplicada de mainClass nos serviços -->
+                        <skip>false</skip> <!-- ByPass no spring-boot:run se tiver true, apenas compila os modulos-->
                     </configuration>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version> <!-- Substitua pela versão do Spring Boot -->
                 </plugin>
-
-<!--                <plugin>-->
-<!--                    <groupId>org.codehaus.mojo</groupId>-->
-<!--                    <artifactId>exec-maven-plugin</artifactId>-->
-<!--                    <version>3.1.0</version>-->
-<!--                    <executions>-->
-<!--                        <execution>-->
-<!--                            &lt;!&ndash; Para gateway-service &ndash;&gt;-->
-<!--                            <id>run-gateway-service</id>-->
-<!--                            <phase>verify</phase>-->
-<!--                            <configuration>-->
-<!--                                <mainClass>com.github.sfidencio.GatewayServiceApplication</mainClass>-->
-<!--                                <arguments>-->
-<!--                                    <argument>&#45;&#45;server.port=8080</argument> &lt;!&ndash; Porta customizada &ndash;&gt;-->
-<!--                                </arguments>-->
-<!--                            </configuration>-->
-<!--                        </execution>-->
-<!--                        <execution>-->
-<!--                            &lt;!&ndash; Para user-service &ndash;&gt;-->
-<!--                            <id>run-discovery-service</id>-->
-<!--                            <phase>verify</phase>-->
-<!--                            <configuration>-->
-<!--                                <mainClass>com.github.sfidencio.DiscoveryServiceApplication</mainClass>-->
-<!--                                <arguments>-->
-<!--                                    <argument>&#45;&#45;server.port=8081</argument>-->
-<!--                                </arguments>-->
-<!--                            </configuration>-->
-<!--                        </execution>-->
-<!--                    </executions>-->
-<!--                </plugin>-->
             </plugins>
         </pluginManagement>
     </build>

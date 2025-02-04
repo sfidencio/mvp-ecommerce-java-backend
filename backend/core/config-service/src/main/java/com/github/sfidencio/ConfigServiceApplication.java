@@ -1,4 +1,4 @@
-package com.github.sfidencio.configservice;
+package com.github.sfidencio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

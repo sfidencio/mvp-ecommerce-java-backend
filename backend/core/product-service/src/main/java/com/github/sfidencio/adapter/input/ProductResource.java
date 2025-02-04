@@ -1,24 +1,22 @@
 package com.github.sfidencio.adapter.input;
 
 import com.github.sfidencio.application.dto.CreateProductRequest;
-import com.github.sfidencio.application.mappers.ProductApplicationMapper;
-import com.github.sfidencio.ports.input.ICreateProductUseCase;
+import com.github.sfidencio.application.mappers.IProductApplicationMapper;
+import com.github.sfidencio.domain.entities.Product;
+import com.github.sfidencio.ports.input.ICreateCommonUseCase;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/v1/products")
-@RequiredArgsConstructor
-public class ProductApplicationResource implements ProductApplicationMapper {
-    private final ICreateProductUseCase createProductUseCase;
+import java.util.UUID;
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    private void createProduct(CreateProductRequest request) {
-        this.createProductUseCase.execute(toDomain(request));
+@RestController
+@RequiredArgsConstructor
+public class ProductResource implements IProductResource {
+    private final ICreateCommonUseCase<UUID, Product> createProductUseCase;
+    private final IProductApplicationMapper mapper;
+
+    @Override
+    public void createProduct(UUID categoryID, CreateProductRequest request) {
+        this.createProductUseCase.execute(categoryID, this.mapper.toDomain(request));
     }
 }

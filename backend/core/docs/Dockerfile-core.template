@@ -1,0 +1,40 @@
+FROM maven:3-openjdk-17 AS stage1
+
+LABEL authors="sebastiaofidencio"
+
+ENV MAVEN_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1"
+
+WORKDIR /app
+
+COPY ./pom.xml .
+
+COPY ./discovery-service/src ./discovery-service/src
+COPY ./discovery-service/pom.xml ./discovery-service
+
+COPY ./config-service/src ./config-service/src
+COPY ./config-service/pom.xml ./config-service
+
+COPY ./gateway-service/src ./gateway-service/src
+COPY ./gateway-service/pom.xml ./gateway-service
+
+COPY ./product-service/src ./product-service/src
+COPY ./product-service/pom.xml ./product-service
+
+RUN mvn dependency:go-offline -B
+
+RUN mvn clean package -DskipTests
+
+
+FROM openjdk:17-alpine AS stage2
+
+RUN apk update && apk add --no-cache curl vim bash iputils htop
+
+WORKDIR /app
+
+COPY --from=stage1 /app/target/*.jar app.jar
+
+EXPOSE 8761
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
+CMD ["java","-Dspring.profiles.active=dev", "-jar", "app.jar"]

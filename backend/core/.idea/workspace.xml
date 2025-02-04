@@ -5,13 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09ca9a23-662d-47bb-9b9b-feb050ffbd41" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/docker/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/adapter/input/IProductResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/adapter/input/ProductResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/adapter/output/database/ProductPersistence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/adapter/output/database/entities/ProductEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/adapter/output/database/repository/IProductRespository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/adapter/output/mappers/IProductInfraMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/adapter/output/mappers/ProductInfraMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/application/dto/CreateProductCategoryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/application/dto/CreateProductRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/application/dto/CreateProductResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/application/mappers/IProductApplicationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/application/mappers/ProductApplicatonMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/application/usecases/CreateProductUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/config/Messages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/config/exceptions/GlobalHandlerException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/domain/entities/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/domain/exceptions/DomainException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/ports/input/ICreateProductUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/ports/output/ICreateProductPort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../profiles/product-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../profiles/product-service.yaml" afterDir="false" />
     </list>
@@ -20,13 +45,40 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sfidencio&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:sfidencio/mvp-ecommerce-java.git&quot;,
+    &quot;accountId&quot;: &quot;e080f610-87c1-4cb2-b27d-2ce7ad1cd020&quot;
+  }
+}</component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -37,10 +89,37 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.Dockerfile-core.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.discovery-service/Dockerfile.executor": "Run",
+    "Docker.docker-compose.yaml.config-service: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.core: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.discovery-service: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.gateway-service: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.keycloak: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.mongodb: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.postgres: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.product-service: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
+    "Docker.docker/Dockerfile (1).executor": "Run",
+    "Docker.docker/Dockerfile.executor": "Run",
+    "HTTP Request.generated-requests | #1.executor": "Run",
+    "Maven.config-service [org.springframework.boot:spring-boot-maven-plugin:3.4.1:run].executor": "Run",
+    "Maven.core [-pl,discovery-service...].executor": "Run",
+    "Maven.core [-pl,gateway-service,springboot:run].executor": "Run",
+    "Maven.core [-pl,product-service...].executor": "Run",
+    "Maven.core [clean,install].executor": "Run",
+    "Maven.core [clean].executor": "Run",
+    "Maven.core [compile].executor": "Run",
+    "Maven.core [install].executor": "Run",
     "Maven.core [package].executor": "Run",
     "Maven.core [spring-boot:run].executor": "Run",
     "Maven.core [verify].executor": "Run",
+    "Maven.discovery-service [clean].executor": "Run",
+    "Maven.discovery-service [org.apache.maven.plugins:maven-jar-plugin:3.4.1:jar].executor": "Run",
     "Maven.discovery-service [org.springframework.boot:spring-boot-maven-plugin:3.4.1:run].executor": "Run",
+    "Maven.discovery-service [package].executor": "Run",
+    "Maven.product-service [compile].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -48,23 +127,54 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ConfigServiceApplication.executor": "Run",
     "Spring Boot.DiscoveryServiceApplication.executor": "Run",
     "Spring Boot.GatewayServiceApplication.executor": "Run",
     "Spring Boot.ProductServiceApplication.executor": "Run",
     "git-widget-placeholder": "master",
+    "go.import.settings.migrated": "true",
     "last_opened_file_path": "C:/Users/sofp/Documents/projetos/mvp-ecommerce-java/backend/core",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "ml.llm.AIAssistantPromptsLibrary",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.github.sfidencio.adapter.output.database" />
+      <recent name="com.github.sfidencio.domain.entities" />
+      <recent name="com.github.sfidencio.ports.input" />
+      <recent name="com.github.sfidencio.adapter.input" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sofp\Documents\projetos\mvp-ecommerce-java\backend\core" />
+      <recent name="C:\Users\sofp\Documents\projetos\mvp-ecommerce-java\backend\core\docs" />
+      <recent name="C:\Users\sofp\Documents\projetos\mvp-ecommerce-java\backend\core\config-service" />
+      <recent name="C:\Users\sofp\Documents\projetos\mvp-ecommerce-java\backend\core\discovery-service" />
+      <recent name="C:\Users\sofp\Documents\projetos\mvp-ecommerce-java\backend\core\gateway-service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sofp\Documents\projetos\mvp-ecommerce-java\backend\core\discovery-service" />
+      <recent name="C:\Users\sofp\Documents\projetos\mvp-ecommerce-java\backend\core" />
+      <recent name="C:\Users\sofp\Documents\projetos\mvp-ecommerce-java\backend\core\docker" />
+      <recent name="C:\Users\sofp\Documents\projetos\mvp-ecommerce-java\backend\core\product-service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.sfidencio.application.dto" />
+      <recent name="com.github.sfidencio.adapter.input" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -75,11 +185,14 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ConfigServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="ConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="config-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.sfidencio.configservice.ConfigServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.sfidencio.ConfigServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -106,18 +219,97 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
+      <deployment type="docker-image">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.config-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="config-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.keycloak: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="keycloak" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.docker-compose.yaml.config-service: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yaml.keycloak: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yaml.postgres: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+      <item itemvalue="HTTP Request.generated-requests | #1" />
       <item itemvalue="Spring Boot.ConfigServiceApplication" />
       <item itemvalue="Spring Boot.ProductServiceApplication" />
       <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="Docker.docker-compose.yaml.config-service: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.keycloak: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.postgres: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28390b856d98-intellij.indexing.shared.core-IU-251.14649.49" />
-        <option value="bundled-js-predefined-d6986cc7102b-b81319f9767f-JavaScript-IU-251.14649.49" />
+        <option value="bundled-jdk-9823dce3aa75-28390b856d98-intellij.indexing.shared.core-IU-251.17181.16" />
+        <option value="bundled-js-predefined-d6986cc7102b-b81319f9767f-JavaScript-IU-251.17181.16" />
       </set>
     </attachedChunks>
   </component>
@@ -131,7 +323,22 @@
       <updated>1737390426764</updated>
       <workItem from="1737390428500" duration="7056000" />
       <workItem from="1737397536501" duration="799000" />
-      <workItem from="1737404317255" duration="6646000" />
+      <workItem from="1737404317255" duration="7608000" />
+      <workItem from="1737463739549" duration="17567000" />
+      <workItem from="1737564602877" duration="1478000" />
+      <workItem from="1737568009384" duration="4922000" />
+      <workItem from="1737576961467" duration="853000" />
+      <workItem from="1737630064098" duration="5570000" />
+      <workItem from="1737646205740" duration="3265000" />
+      <workItem from="1737718404590" duration="15811000" />
+      <workItem from="1737985499725" duration="7253000" />
+      <workItem from="1738156213831" duration="9344000" />
+      <workItem from="1738260777815" duration="1627000" />
+      <workItem from="1738265609098" duration="1054000" />
+      <workItem from="1738283700086" duration="11075000" />
+      <workItem from="1738525724343" duration="3471000" />
+      <workItem from="1738587393178" duration="869000" />
+      <workItem from="1738670094271" duration="15525000" />
     </task>
     <servers />
   </component>
@@ -142,5 +349,13 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

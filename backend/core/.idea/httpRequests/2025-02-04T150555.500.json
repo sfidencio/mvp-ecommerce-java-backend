@@ -1,0 +1,7 @@
+{
+  "type": "about:blank",
+  "title": "Internal Server Error",
+  "status": 500,
+  "detail": "JSON parse error: Cannot deserialize value of type `java.util.UUID` from String \"1234\": UUID has to be represented by standard 36-char representation",
+  "instance": "/v1/products"
+}

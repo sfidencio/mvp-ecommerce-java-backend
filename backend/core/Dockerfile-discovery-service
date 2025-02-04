@@ -1,0 +1,26 @@
+FROM maven:3-openjdk-17 AS builder
+
+LABEL authors="sebastiaofidencio"
+
+ENV MAVEN_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1"
+
+WORKDIR /app
+
+COPY . .
+
+RUN mvn clean package -DskipTests
+
+FROM openjdk:17-alpine AS discovery-service
+
+RUN apk update && apk add --no-cache curl vim bash iputils htop
+
+WORKDIR /app
+
+ARG JAR_FILE=discovery-service*.jar
+
+COPY --from=builder /app/discovery-service/target/${JAR_FILE} app.jar
+
+EXPOSE 8761
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
