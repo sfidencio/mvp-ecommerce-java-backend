@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09ca9a23-662d-47bb-9b9b-feb050ffbd41" name="Changes" comment="">
+    <list default="true" id="09ca9a23-662d-47bb-9b9b-feb050ffbd41" name="Changes" comment="chore(docker): finalizado configurações compose">
       <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/product-service/docker/Dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/adapter/input/IProductResource.java" afterDir="false" />
@@ -338,7 +338,7 @@
       <workItem from="1738283700086" duration="11075000" />
       <workItem from="1738525724343" duration="3471000" />
       <workItem from="1738587393178" duration="869000" />
-      <workItem from="1738670094271" duration="15525000" />
+      <workItem from="1738670094271" duration="16329000" />
     </task>
     <servers />
   </component>
@@ -349,6 +349,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <MESSAGE value="chore(docker): finalizado configurações compose" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(docker): finalizado configurações compose" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
