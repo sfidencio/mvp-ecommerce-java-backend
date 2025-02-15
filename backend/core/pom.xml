@@ -16,6 +16,7 @@
         <spring-cloud.version>2024.0.0</spring-cloud.version>
         <spring-boot.version>3.4.1</spring-boot.version>
         <lombok.version>1.18.36</lombok.version>
+        <mapstruct.version>1.6.3</mapstruct.version>
     </properties>
 
     <modules>
@@ -48,10 +49,11 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+           <!-- MapStruct -->
             <dependency>
-                <groupId>org.modelmapper</groupId>
-                <artifactId>modelmapper</artifactId>
-                <version>3.1.1</version> <!-- Replace with the desired version -->
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springdoc</groupId>

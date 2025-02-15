@@ -1,8 +1,10 @@
 package com.github.sfidencio.adapter.input;
 
 import com.github.sfidencio.application.dto.CreateCategoryRequest;
+import com.github.sfidencio.application.dto.CreateCategoryResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,12 +21,12 @@ public interface ICategoryResource {
             summary = "Create a new Category",
             description = "Create a new Category with the specified details",
             responses = {
-                    @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "201", description = "Category created successfully"),
-                    @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "409", description = "Category already exists"),
-                    @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "400", description = "Invalid request payload")
+                    @ApiResponse(responseCode = "201", description = "Category created successfully"),
+                    @ApiResponse(responseCode = "409", description = "Category already exists"),
+                    @ApiResponse(responseCode = "400", description = "Invalid request payload")
             }
     )
-    void createCategory(
+    CreateCategoryResponse createCategory(
             @RequestBody
             @Parameter(description = "Details of the category to create", required = true)
             CreateCategoryRequest request

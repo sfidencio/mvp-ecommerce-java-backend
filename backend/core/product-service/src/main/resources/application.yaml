@@ -3,9 +3,11 @@ spring:
     name: product-service
   data:
     mongodb:
-      uri: mongodb://${MONGO_SERVICE_HOST:localhost}:${MONGO_SERVICE_PORT:27017}/${MONGO_SERVICE_DATABASE:productdb}
-      username: ${MONGO_USER:admin}
-      password: ${MONGO_PASSWORD:admin}
+      #uri: mongodb://${MONGO_USER:admin}:${MONGO_PASSWORD:admin}@${MONGO_SERVICE_HOST:localhost}:${MONGO_SERVICE_PORT:27017}/${MONGO_SERVICE_DATABASE:productdb}
+      username: root
+      password: root
+      database: productdb1
+      host: localhost
 #  cloud:
 #    config:
 #      uri: http://${CONFIG_SERVER_HOST:localhost}:${CONFIG_SERVER_PORT:8081}
@@ -16,6 +18,7 @@ server:
 logging:
   level:
     root: ${PRODUCT_SERVER_LOG_LEVEL:info}
+    org.mongodb.driver: debug
 
 eureka:
   client:

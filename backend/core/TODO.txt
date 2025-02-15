@@ -1,0 +1,2 @@
+TODO: Configurar pipeline CI/CD no github (validar commits)
+TODO: Usar gitflow para versionamento

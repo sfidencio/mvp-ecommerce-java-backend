@@ -234,6 +234,10 @@ Este projeto está licenciado sob a licença [MIT](LICENSE).
 
 2. No entato, para funcionamento dockerizado, teremos que fazer um ajuste
 
+3. Configuração WSL2 para acessar as aplicações através do navegador ou qualquer outra aplicação que esteja rodando no Windows.
+    - https://github.com/sfidencio/my-study-projects/blob/master/dicas-macetes-ferramentas/README.md
+      - Basta procurar por "Configuração WSL para funcionar em modo NAT e encaminhando solicitações oriundas do host-> wsl, vice-versa."
+
 
 ## 11. Referências <a name="referencias"></a>
 
