@@ -5,6 +5,7 @@ import com.github.sfidencio.ports.input.ICreateCreateProductUseCaseInput;
 import com.github.sfidencio.ports.output.ICreateProductAdapterOutput;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.UUID;
 
@@ -15,6 +16,7 @@ public class CreateCreateProductUseCase implements ICreateCreateProductUseCaseIn
     private final ICreateProductAdapterOutput output;
 
     @Override
+    @Transactional
     public Product execute(UUID idCategory, Product domain) {
         domain.validatePrice();
         domain.validateStock();

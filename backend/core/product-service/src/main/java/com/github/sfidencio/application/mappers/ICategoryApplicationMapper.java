@@ -5,7 +5,7 @@ import com.github.sfidencio.application.dto.CreateCategoryResponse;
 import com.github.sfidencio.domain.entities.Category;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper
 public interface ICategoryApplicationMapper {
 
     Category toDomain(CreateCategoryRequest createCategoryRequest);

@@ -4,7 +4,7 @@ import com.github.sfidencio.adapter.output.database.entities.ProductEntity;
 import com.github.sfidencio.domain.entities.Product;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper
 public interface IProductInfraMapper {
     ProductEntity toEntity(Product product);
 

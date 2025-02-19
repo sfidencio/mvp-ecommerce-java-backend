@@ -3,12 +3,15 @@ spring:
     name: product-service
   data:
     mongodb:
-      #uri: mongodb://${MONGO_USER:admin}:${MONGO_PASSWORD:admin}@${MONGO_SERVICE_HOST:localhost}:${MONGO_SERVICE_PORT:27017}/${MONGO_SERVICE_DATABASE:productdb}
-      username: root
-      password: root
-      database: productdb1
-      host: localhost
-#  cloud:
+      host: ${MONGO_SERVICE_HOST:localhost}
+      port: ${MONGO_SERVICE_PORT:27017}
+      database: ${MONGO_SERVICE_DATABASE:productdb}
+      username: ${MONGO_USER:root}
+      password: ${MONGO_PASSWORD:root}
+      authentication-database: ${MONGO_AUTHENTICATION_DATABASE:admin}
+
+
+##  cloud:
 #    config:
 #      uri: http://${CONFIG_SERVER_HOST:localhost}:${CONFIG_SERVER_PORT:8081}
 #      name: ${PRODUCT_SERVICE_HOST:product-service}
@@ -18,7 +21,6 @@ server:
 logging:
   level:
     root: ${PRODUCT_SERVER_LOG_LEVEL:info}
-    org.mongodb.driver: debug
 
 eureka:
   client:
@@ -26,3 +28,9 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: ${EUREKA_TYPE_PROTOCOL:http}://${EUREKA_SERVER_HOST:localhost}:${EUREKA_SERVER_PORT:8761}/eureka/
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html

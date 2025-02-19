@@ -5,7 +5,7 @@ import com.github.sfidencio.application.dto.CreateProductResponse;
 import com.github.sfidencio.domain.entities.Product;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper
 public interface IProductApplicationMapper {
     Product toDomain(CreateProductRequest createProductRequest);
 

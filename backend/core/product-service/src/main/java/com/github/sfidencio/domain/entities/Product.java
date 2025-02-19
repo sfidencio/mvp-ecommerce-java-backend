@@ -1,6 +1,6 @@
 package com.github.sfidencio.domain.entities;
 
-import com.github.sfidencio.config.Messages;
+import com.github.sfidencio.config.Constants;
 import com.github.sfidencio.domain.exceptions.DomainException;
 
 import java.math.BigDecimal;
@@ -18,12 +18,12 @@ public record Product(UUID id,
 
     public void validatePrice() {
         if (this.price == null || this.price.compareTo(BigDecimal.ZERO) <= 0)
-            throw new DomainException(Messages.MSG_ERRO_DOMAIN_INVALID_PRICE, Messages.HTTP_STATUS_CODE_422);
+            throw new DomainException(Constants.MSG_ERRO_DOMAIN_INVALID_PRICE, Constants.HTTP_STATUS_CODE_422);
     }
 
     public void validateStock() {
         if (this.stock == null || this.stock.compareTo(BigDecimal.ZERO) < 0) {
-            throw new DomainException(Messages.MSG_ERRO_DOMAIN_INVALID_STOCK, Messages.HTTP_STATUS_CODE_422);
+            throw new DomainException(Constants.MSG_ERRO_DOMAIN_INVALID_STOCK, Constants.HTTP_STATUS_CODE_422);
         }
     }
 

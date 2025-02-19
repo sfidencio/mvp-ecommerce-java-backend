@@ -4,7 +4,7 @@ import com.github.sfidencio.adapter.output.database.entities.CategoryEntity;
 import com.github.sfidencio.domain.entities.Category;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper
 public interface ICategoryInfraMapper {
     CategoryEntity toEntity(Category category);
 
