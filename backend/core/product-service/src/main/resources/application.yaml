@@ -9,7 +9,11 @@ spring:
       username: ${MONGO_USER:root}
       password: ${MONGO_PASSWORD:root}
       authentication-database: ${MONGO_AUTHENTICATION_DATABASE:admin}
-
+#  devtools:
+#    livereload:
+#      enabled: true
+#    restart:
+#      enabled: true
 
 ##  cloud:
 #    config:

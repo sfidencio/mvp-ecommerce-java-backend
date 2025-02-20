@@ -127,7 +127,7 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: root
-      ME_CONFIG_MONGODB_URL: mongodb://root:root@mongodb:27017/
+      ME_CONFIG_MONGODB_URL: mongodb://root:${ME_CONFIG_MONGODB_ADMINPASSWORD}@mongodb:27017/
       ME_CONFIG_BASICAUTH: false #default credentials is admin:pass when is true
     ports:
       - "8090:8081"
