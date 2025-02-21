@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09ca9a23-662d-47bb-9b9b-feb050ffbd41" name="Changes" comment="env(arch): adjust arch">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci-cd-develop.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci-cd-develop.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/adapter/output/mappers/ICategoryInfraMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/adapter/output/mappers/ICategoryInfraMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/adapter/output/mappers/IProductInfraMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/adapter/output/mappers/IProductInfraMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/application/mappers/ICategoryApplicationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/application/mappers/ICategoryApplicationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/application/mappers/IProductApplicationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/application/mappers/IProductApplicationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/config/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/github/sfidencio/config/Constants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,82 +65,82 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ConfigServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.DiscoveryServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.ProductServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Docker.Dockerfile-core.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.discovery-service/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.config-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.core: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.discovery-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.gateway-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.keycloak: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.mongo-express: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.mongodb: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.product-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker/Dockerfile (1).executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.generated-requests | #1.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.config-service [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.config-service [org.springframework.boot:spring-boot-maven-plugin:3.4.1:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.core [-pl,discovery-service...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.core [-pl,gateway-service,springboot:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.core [-pl,product-service...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.core [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.core [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.core [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.core [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.core [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.core [spring-boot:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.core [verify].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.discovery-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.discovery-service [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.discovery-service [org.apache.maven.plugins:maven-jar-plugin:3.4.1:jar].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.discovery-service [org.springframework.boot:spring-boot-maven-plugin:3.4.1:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.discovery-service [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.gateway-service [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mvp-ecommerce-java-backend [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.product-service [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.product-service [install].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\sofp\\AppData\\Roaming\\JetBrains\\IdeaIC2024.3\\plugins\\Shell Script\\shellcheck.exe&quot;,
-    &quot;Spring Boot.ConfigServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.DiscoveryServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.config.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sofp/Documents/projetos/mvp-ecommerce-java-backend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ConfigServiceApplication.executor": "Debug",
+    "Application.DiscoveryServiceApplication.executor": "Debug",
+    "Application.ProductServiceApplication.executor": "Debug",
+    "Docker.Dockerfile-core.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.discovery-service/Dockerfile.executor": "Run",
+    "Docker.docker-compose.yaml.config-service: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.core: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.discovery-service: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.gateway-service: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.keycloak: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.mongo-express: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.mongodb: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.postgres: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.product-service: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
+    "Docker.docker/Dockerfile (1).executor": "Run",
+    "Docker.docker/Dockerfile.executor": "Run",
+    "HTTP Request.generated-requests | #1.executor": "Run",
+    "Maven.config-service [install].executor": "Run",
+    "Maven.config-service [org.springframework.boot:spring-boot-maven-plugin:3.4.1:run].executor": "Run",
+    "Maven.core [-pl,discovery-service...].executor": "Run",
+    "Maven.core [-pl,gateway-service,springboot:run].executor": "Run",
+    "Maven.core [-pl,product-service...].executor": "Run",
+    "Maven.core [clean,install].executor": "Run",
+    "Maven.core [clean].executor": "Run",
+    "Maven.core [compile].executor": "Run",
+    "Maven.core [install].executor": "Run",
+    "Maven.core [package].executor": "Run",
+    "Maven.core [spring-boot:run].executor": "Run",
+    "Maven.core [verify].executor": "Run",
+    "Maven.discovery-service [clean].executor": "Run",
+    "Maven.discovery-service [install].executor": "Run",
+    "Maven.discovery-service [org.apache.maven.plugins:maven-jar-plugin:3.4.1:jar].executor": "Run",
+    "Maven.discovery-service [org.springframework.boot:spring-boot-maven-plugin:3.4.1:run].executor": "Run",
+    "Maven.discovery-service [package].executor": "Run",
+    "Maven.gateway-service [install].executor": "Run",
+    "Maven.mvp-ecommerce-java-backend [install].executor": "Run",
+    "Maven.product-service [compile].executor": "Run",
+    "Maven.product-service [install].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SHELLCHECK.PATH": "C:\\Users\\sofp\\AppData\\Roaming\\JetBrains\\IdeaIC2024.3\\plugins\\Shell Script\\shellcheck.exe",
+    "Spring Boot.ConfigServiceApplication.executor": "Run",
+    "Spring Boot.DiscoveryServiceApplication.executor": "Run",
+    "Spring Boot.GatewayServiceApplication.executor": "Run",
+    "Spring Boot.ProductServiceApplication.executor": "Run",
+    "Spring Boot.config.executor": "Run",
+    "git-widget-placeholder": "feature/myfeature1",
+    "go.import.settings.migrated": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/sofp/Documents/projetos/mvp-ecommerce-java-backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -359,6 +354,7 @@
     </ignored-roots>
     <MESSAGE value="chore(docker): finalizado configurações compose" />
     <MESSAGE value="feat(product/category): create endpoint category and product" />
+    <MESSAGE value="chore(all): adjust folders and struct" />
     <MESSAGE value="env(arch): adjust arch" />
     <option name="LAST_COMMIT_MESSAGE" value="env(arch): adjust arch" />
   </component>
