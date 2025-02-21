@@ -1,5 +1,7 @@
 # Documentação do Projeto
 
+[![CI/CD pipeline for Multi-Module Project in develop](https://github.com/sfidencio/mvp-ecommerce-java-backend/actions/workflows/ci-cd-develop.yaml/badge.svg?branch=develop)](https://github.com/sfidencio/mvp-ecommerce-java-backend/actions/workflows/ci-cd-develop.yaml)
+
 ## Sumário
 
 1. [Introdução](#introducao)

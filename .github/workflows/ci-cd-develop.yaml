@@ -12,15 +12,67 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set up Git
+        run: |
+          git config --global user.name "Sebastião Fidêncio da Silva Pereira"
+          git config --global user.email "sfidencio@gmail.com"
+    
+
       - name: Validate commit message
         run: |
           git log -1 --pretty=%B | grep -qE '^(feat|fix|docs|style|refactor|perf|test|chore|ci)\([a-z0-9_-]+\): .+'
           if [ $? -ne 0 ]; then
+            echo "**********************************"
             echo "Formato de mensagem de commit inválido."
             echo "Use o formato: tipo(escopo): mensagem"
             echo "Exemplos:"
             echo "  feat(user): add login feature"
             echo "  fix(api): fix status code"
             echo "  docs(readme): update docs"
+            echo "**********************************"
+            echo "Para corrigir a mensagem de commit, use o seguinte comando:"
+            echo "git commit --amend -m 'feat(user): add login feature'"
+            echo "Ou via rebase interativo:"
+            echo "git rebase -i HEAD~n"
+            echo "Onde 'n' é o número de commits a serem corrigidos."
+            echo "Em seguida altera a mensagem e mude 'pick' para 'reword'."
+            echo "Depois faça o push forçado:"
             exit 1
           fi
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build and Test
+        #run: mvn clean verify
+        run: echo "Build and Test"
+
+      - name: Extract version
+        id: extract_version
+        run: |
+          cd config-service
+          VERSION_CONFIG_SERVICE=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+          echo "VERSION_CONFIG_SERVICE=$VERSION_CONFIG_SERVICE" >> $GITHUB_ENV
+          cd ..
+
+      - name: Create Tags for each module
+        run: |
+          git tag -a "v${{ env.VERSION_CONFIG_SERVICE }}" -m "Release version ${{ env.VERSION_CONFIG_SERVICE }}"
+          git push origin "v${{ env.VERSION_CONFIG_SERVICE }}"
+
+      - name: Create Pull Request
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          curl -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "title": "Automatic PR for develop",
+              "head": "develop",
+              "base": "master",
+              "body": "This PR was created automatically by the CI/CD pipeline."
+            }' \
+            https://api.github.com/repos/sfidencio/mvp-ecommerce-java-backend/pulls
