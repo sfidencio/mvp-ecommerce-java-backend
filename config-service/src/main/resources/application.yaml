@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: ${CONFIG_SERVER_HOST_GITHUB:https://github.com/sfidencio/mvp-ecommerce-java}
+          uri: ${CONFIG_SERVER_HOST_GITHUB:https://github.com/sfidencio/mvp-ecommerce-java-backend}
           search-paths: profiles
         bootstrap: true
 server:

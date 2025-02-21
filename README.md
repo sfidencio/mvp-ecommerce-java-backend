@@ -60,11 +60,10 @@ Uma breve descrição do projeto:
 
 ## 3. Configuração <a name="configuracao"></a>
 
-1. Instruções instalação docker no WSL2/Linux:
-    4. https://github.com/sfidencio/my-study-projects/blob/master/explorando-configuracao-ambiente-windows-wsl2-ubuntu-shell-zshrc/README.md
-
-2. Instalação do minikube - executando kubernetes localmente:
-    5. https://minikube.sigs.k8s.io/docs/
+- Instruções instalação docker no WSL2/Linux: 
+  - https://github.com/sfidencio/my-study-projects/blob/master/explorando-configuracao-ambiente-windows-wsl2-ubuntu-shell-zshrc/README.md
+- Instalação do minikube - executando kubernetes localmente:
+  - https://minikube.sigs.k8s.io/docs/
 
 ---
 
