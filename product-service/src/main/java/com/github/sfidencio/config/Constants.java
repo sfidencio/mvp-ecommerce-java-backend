@@ -4,6 +4,8 @@ import org.apache.commons.lang.StringUtils;
 
 public class Constants {
 
+    public static final String SPRING = "spring"; ;
+
     private Constants() {
         throw new IllegalStateException(CLASS_UTILITIY);
     }
