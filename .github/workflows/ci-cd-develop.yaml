@@ -1,4 +1,4 @@
-name: CI/CD pipeline for Multi-Module Project
+name: CI/CD pipeline for Multi-Module Project in develop
 
 on:
   push:
