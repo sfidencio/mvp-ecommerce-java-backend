@@ -147,6 +147,7 @@
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SHELLCHECK.PATH": "C:\\Users\\sofp\\AppData\\Roaming\\JetBrains\\IdeaIC2024.3\\plugins\\Shell Script\\shellcheck.exe",
     "Spring Boot.ConfigServiceApplication.executor": "Run",
     "Spring Boot.DiscoveryServiceApplication.executor": "Run",
     "Spring Boot.GatewayServiceApplication.executor": "Run",
