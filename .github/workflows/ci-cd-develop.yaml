@@ -19,3 +19,4 @@ jobs:
                   if [ $? -ne 0 ]; then
                     echo "Invalid commit message format. Please use the conventional commit format."
                     exit 1
+                fi
