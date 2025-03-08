@@ -56,15 +56,3 @@ jobs:
 
       - name: Build and Test Maven Project
         run: mvn clean verify
-
-      - name: SonarQube Scan
-        env:
-          SONAR_TOKEN: 12a34201cee5f0c0a3af692cccc0cc4b15d77539
-        run: |
-          mvn sonar:sonar \
-            -Dsonar.organization=sfidencio \
-            -Dsonar.projectKey=sfidencio_mvp-ecommerce-java-backend \
-            -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
-            -Dsonar.branch.name=develop \
-            -Dsonar.analysis.mode=publish
