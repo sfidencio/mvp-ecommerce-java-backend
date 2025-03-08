@@ -3,7 +3,7 @@ name: CD tag, release, sonar, docker image and deploy
 on:
   push:
     branches:
-      - 'main'
+      - 'master'
 
 jobs:
   build-and-test:
