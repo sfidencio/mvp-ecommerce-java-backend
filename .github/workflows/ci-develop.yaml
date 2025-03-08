@@ -42,6 +42,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Set up Git
+        run: |
+          git config --global user.name "Sebastião Fidencio"
+          git config --global user.email "sfidencio@gmail.com"
       - name: Check for merge conflicts
         run: |
           git fetch origin develop
