@@ -3,3 +3,7 @@ TODO: Usar gitflow para versionamento
 TODO: Fazer uso de testconteiners para testes de integração
 TODO: fazer  a leitura de credencias diretamente do vault da AWS
 TODO: Usando exemplos com graphql no spring-boot
+
+TODO: 08/03/2025
+TODO: Pendencias
+TODO: Resolver problema merge entre develop e master pra acionar o pipeline CD
