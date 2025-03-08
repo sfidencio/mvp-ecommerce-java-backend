@@ -1,0 +1,25 @@
+name: Create Pull Request from feature/* to develop
+
+on:
+  workflow_run:
+    workflows: ["CI/CD pipeline for Multi-Module Project in develop"]
+    types:
+      - completed
+
+jobs:
+  create-pull-request:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: develop
+          head: ${{ github.event.workflow_run.head_branch }}
+          title: "Merge ${{ github.event.workflow_run.head_branch }} into develop"
+          body: "This is an automated pull request to merge changes from ${{ github.event.workflow_run.head_branch }} to develop."
+          draft: false

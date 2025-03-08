@@ -3,7 +3,7 @@ name: CI/CD pipeline for Multi-Module Project in develop
 on:
   push:
     branches:
-      - develop
+      - feature/*
 
 jobs:
   validate-commit:
