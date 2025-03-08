@@ -36,7 +36,6 @@ jobs:
             echo "Depois faça o push forçado:"
             exit 1
           fi
-
 #  check-merge-conflicts:
 #    runs-on: ubuntu-latest
 #    steps:
