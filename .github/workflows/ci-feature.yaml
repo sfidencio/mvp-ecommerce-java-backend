@@ -69,11 +69,9 @@ jobs:
           distribution: 'temurin'
       - name: Build and Test Maven Project
         run: mvn verify
+  #https://github.com/marketplace/actions/create-pull-request
   create-pull-request:
     runs-on: ubuntu-latest
-    permissions:
-        contents: write
-        pull-requests: write
     needs: [ build-and-test ]
     if: ${{ success() }}
     steps:
@@ -83,7 +81,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
           commit-message: "Create Pull Request for feature branch"
           branch: ${{ github.ref }}
           base: develop
