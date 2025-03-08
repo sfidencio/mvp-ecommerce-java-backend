@@ -5,7 +5,6 @@ on:
     workflows: ["CI/CD pipeline for Multi-Module Project in develop"]
     types:
       - completed
-
 jobs:
   create-pull-request:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
