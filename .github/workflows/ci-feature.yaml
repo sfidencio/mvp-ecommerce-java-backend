@@ -71,6 +71,9 @@ jobs:
         run: mvn verify
   create-pull-request:
     runs-on: ubuntu-latest
+    permissions:
+        contents: write
+        pull-requests: write
     needs: [ build-and-test ]
     if: ${{ success() }}
     steps:
