@@ -62,9 +62,9 @@ jobs:
     needs: [validate-commit, check-merge-conflicts]
     steps:
       - name: Checkout code
-        uses: ./.github/actions/checkout
+        uses: actions/checkout@v4
       - name: Set up JDK 17
-        uses: ./.github/actions/setup-java
+        uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
