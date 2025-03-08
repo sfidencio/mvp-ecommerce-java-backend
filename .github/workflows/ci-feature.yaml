@@ -86,4 +86,4 @@ jobs:
           branch: ${{ github.ref }}
           base: develop
           title: "Pull Request for feature branch"
-          body: "This PR is automatically created by the CI workflow."
+          body: "This PR is automatically created by the CI workflow da branch feature/${{ github.ref }} to develop"
