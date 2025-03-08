@@ -1,4 +1,4 @@
-name: CI/CD pipeline for Multi-Module Project in develop
+name: CI validate commits, build and test, create pull request for develop
 
 on:
   push:
