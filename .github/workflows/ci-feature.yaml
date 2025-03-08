@@ -36,29 +36,29 @@ jobs:
             echo "Depois faça o push forçado:"
             exit 1
           fi
-#  check-merge-conflicts:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Checkout code
-#        uses: actions/checkout@v4
-#      - name: Set up Git
-#        run: |
-#          git config --global user.name "Sebastião Fidencio"
-#          git config --global user.email "sfidencio@gmail.com"
-#      - name: Check for merge conflicts
-#        run: |
-#          git fetch origin develop
-#          git merge-base --is-ancestor origin/develop HEAD
-#          if [ $? -ne 0 ]; then
-#            echo "**********************************"
-#            echo "Conflitos de mesclagem detectados."
-#            echo "Resolva os conflitos antes de continuar."
-#            echo "**********************************"
-#            exit 1
-#          fi
+  check-merge-conflicts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Git
+        run: |
+          git config --global user.name "Sebastião Fidencio"
+          git config --global user.email "sfidencio@gmail.com"
+      - name: Check for merge conflicts
+        run: |
+          git fetch origin develop
+          git merge-base --is-ancestor origin/develop HEAD
+          if [ $? -ne 0 ]; then
+            echo "**********************************"
+            echo "Conflitos de mesclagem detectados."
+            echo "Resolva os conflitos antes de continuar."
+            echo "**********************************"
+            exit 1
+          fi
   build-and-test:
     runs-on: ubuntu-latest
-    needs: [validate-commit]
+    needs: [validate-commit, check-merge-conflicts]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
