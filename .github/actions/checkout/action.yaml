@@ -1,0 +1,7 @@
+name: Checkout
+description: Checkout code
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout code
+      run: git clone ${{ github.repository_url }} .
