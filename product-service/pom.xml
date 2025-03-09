@@ -77,7 +77,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-           <optional>true</optional>
+            <optional>true</optional>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -141,13 +141,13 @@
                             <version>0.2.0</version>
                         </dependency>
                     </annotationProcessorPaths>
-<!--                    <compilerArgs>-->
-<!--                        &lt;!&ndash;essa configuração é necessária para que o mapstruct gere as classes de mapeamento&ndash;&gt;-->
-<!--                        &lt;!&ndash;sem a necessidadede usar o @Mapper(componentModel = "spring") em cada mapeador &ndash;&gt;-->
-<!--                        <compilerArg>-->
-<!--                            -Amapstruct.defaultComponentModel=spring-->
-<!--                        </compilerArg>-->
-<!--                    </compilerArgs>-->
+                    <!--                    <compilerArgs>-->
+                    <!--                        &lt;!&ndash;essa configuração é necessária para que o mapstruct gere as classes de mapeamento&ndash;&gt;-->
+                    <!--                        &lt;!&ndash;sem a necessidadede usar o @Mapper(componentModel = "spring") em cada mapeador &ndash;&gt;-->
+                    <!--                        <compilerArg>-->
+                    <!--                            -Amapstruct.defaultComponentModel=spring-->
+                    <!--                        </compilerArg>-->
+                    <!--                    </compilerArgs>-->
                 </configuration>
             </plugin>
             <plugin>

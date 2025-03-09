@@ -5,6 +5,11 @@
     <artifactId>discovery-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>discovery-service</name>
+
+    <properties>
+        <spring-cloud.version>2024.0.0</spring-cloud.version>
+    </properties>
+
     <packaging>jar</packaging>
     <parent>
         <groupId>com.github.sfidencio</groupId>

@@ -7,3 +7,4 @@ TODO: Usando exemplos com graphql no spring-boot
 TODO: 08/03/2025
 TODO: Pendencias
 TODO: Resolver problema merge entre develop e master pra acionar o pipeline CD
+TODO: Ajustar configurações sonar cloud para desde projeto pai e subprojetos
